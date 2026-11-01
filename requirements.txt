@@ -1,0 +1,21 @@
+# Core runtime dependency
+psutil>=5.9.0
+
+# Optional SMART probing uses the smartctl executable from smartmontools.
+# Install smartmontools with the OS package manager or official installer; it is
+# not a Python package and cannot be installed through this requirements file.
+# No pySMART/diskinfo wrappers are needed because both depend on smartctl.
+
+# Optional enhanced measurements: numpy, py-cpuinfo, nvidia-ml-py.
+# AMD GPU edge/hotspot temperature is optional; install separately when an
+# AMD driver exposes ADLX metrics: py -3.14 -m pip install amd-adlx
+# The official amd-adlx package provides Windows x64 wheels for CPython 3.14.
+# CUDA/DirectML GPU benchmarking requires a compatible PyTorch installation.
+# The H.264 encoder benchmark requires FFmpeg on PATH.
+
+# Windows temperature providers are installed together through these packages.
+# PawnIO is a separate external Windows kernel driver (not a pip package) used
+# for optional extended/low-level sensor access; use install_pawnio.ps1 or WinGet.
+HardwareMonitor>=1.2.1
+pythonnet>=3.0.5
+PyLibreHardwareMonitor==1.2.2
